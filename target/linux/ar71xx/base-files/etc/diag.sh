@@ -429,7 +429,8 @@ get_status_led() {
 	tl-wr841n-v9)
 		status_led="tp-link:green:qss"
 		;;
-	tl-wdr6500-v2)
+	tl-wdr6500-v2|\
+	tl-wdr6500-v6)
 		status_led="tp-link:white:system"
 		;;
 	tube2h)
