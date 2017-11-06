@@ -39,7 +39,7 @@
 #define TL_WDR6500_V6_KEYS_DEBOUNCE_INTERVAL	(3 * TL_WDR6500_V6_KEYS_POLL_INTERVAL)
 
 #define TL_WDR6500_V6_WMAC_CALDATA_OFFSET	0x1000
-#define TL_WDR6500_V6_PCIE_CALDATA_OFFSET	0x5000
+#define TL_WDR6500_V6_PCIE_CALDATA_OFFSET	0x2000
 
 static const char *tl_wdr6500_v6_part_probes[] = {
 	"tp-link-64k",
@@ -92,7 +92,7 @@ static struct gpio_keys_button tl_wdr6500_v6_gpio_keys[] __initdata = {
 
 static void __init tl_ap151_setup(void)
 {
-	u8 *mac = (u8 *) KSEG1ADDR(0x1f00fc00);
+	u8 *mac = (u8 *) KSEG1ADDR(0x1fff080d);
 	u8 *art = (u8 *) KSEG1ADDR(0x1fff0000);
 	u8 tmpmac[ETH_ALEN];
 
