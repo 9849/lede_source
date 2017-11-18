@@ -121,7 +121,7 @@ static void __init tl_ap151_setup(void)
 	ath79_init_mac(tmpmac, mac, -1);
 	ath79_register_wmac(art + TL_WDR6500_V6_WMAC_CALDATA_OFFSET, tmpmac);
 
-	ath79_register_pci();
+	ap91_pci_init(art + TL_WDR6500_V6_PCIE_CALDATA_OFFSET, NULL);
 }
 
 static void __init tl_wdr6500_v6_setup(void)
